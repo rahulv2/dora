@@ -1,0 +1,72 @@
+<%= form_for(member) do |f| %>
+  <% if member.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(member.errors.count, "error") %> prohibited this member from being saved:</h2>
+
+      <ul>
+      <% member.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :pit_id %>
+    <%= f.text_field :pit_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cubicle_id %>
+    <%= f.text_field :cubicle_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :extension_number %>
+    <%= f.text_field :extension_number %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ip_address %>
+    <%= f.text_field :ip_address %>
+  </div>
+
+  <div class="field">
+    <%= f.label :keyboard %>
+    <%= f.text_field :keyboard %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mouse %>
+    <%= f.text_field :mouse %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cpu %>
+    <%= f.text_field :cpu %>
+  </div>
+
+  <div class="field">
+    <%= f.label :monitor %>
+    <%= f.text_field :monitor %>
+  </div>
+
+  <div class="field">
+    <%= f.label :headset %>
+    <%= f.text_field :headset %>
+  </div>
+
+  <div class="field">
+    <%= f.label :webcam %>
+    <%= f.text_field :webcam %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

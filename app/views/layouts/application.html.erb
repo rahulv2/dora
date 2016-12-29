@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nasa</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" %>
+    <%= yield :head %>
+  </head>
+
+  <body>
+    <% if user_signed_in? %>
+      <%= render "shared/header" %>
+      <div class="container page-container">
+        <%= yield %>
+      </div>
+    <% else %>
+      <%= yield %>
+    <% end %>
+  </body>
+</html>

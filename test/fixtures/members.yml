@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pit_id: MyString
+  name: MyString
+  cubicle_id: MyString
+  extension_number: MyString
+  ip_address: MyString
+  assets: MyText
+
+two:
+  pit_id: MyString
+  name: MyString
+  cubicle_id: MyString
+  extension_number: MyString
+  ip_address: MyString
+  assets: MyText

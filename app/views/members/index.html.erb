@@ -1,0 +1,55 @@
+<div class="page-header">
+  <h1>Members</h1>
+</div>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>PIT ID</th>
+      <th>Name</th>
+      <th>Cubicle ID</th>
+      <th>Extension Number</th>
+      <th>IP Address</th>
+      <th>Keyboard</th>
+      <th>Mouse</th>
+      <th>CPU</th>
+      <th>Monitor</th>
+      <th>Headset</th>
+      <th>Webcam</th>
+      <th colspan="3">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% if @members.blank? %>
+      <tr>
+        <td colspan="9" class="text-center">
+          No members found.
+        </td>
+      </tr>
+    <% else %>
+      <% @members.each do |member| %>
+        <tr>
+          <td><%= member.pit_id %></td>
+          <td><%= member.name %></td>
+          <td><%= member.cubicle_id %></td>
+          <td><%= member.extension_number %></td>
+          <td><%= member.ip_address %></td>
+          <td><%= member.keyboard %></td>
+          <td><%= member.mouse %></td>
+          <td><%= member.cpu %></td>
+          <td><%= member.monitor %></td>
+          <td><%= member.headset %></td>
+          <td><%= member.webcam %></td>
+          <td><%= link_to 'Show', member %></td>
+          <td><%= link_to 'Edit', edit_member_path(member) %></td>
+          <td><%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Member', new_member_path %>

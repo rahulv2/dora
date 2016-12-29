@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pit:</strong>
+  <%= @member.pit_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @member.name %>
+</p>
+
+<p>
+  <strong>Cubicle:</strong>
+  <%= @member.cubicle_id %>
+</p>
+
+<p>
+  <strong>Extension number:</strong>
+  <%= @member.extension_number %>
+</p>
+
+<p>
+  <strong>Ip address:</strong>
+  <%= @member.ip_address %>
+</p>
+
+<p>
+  <strong>Assets:</strong>
+  <%= @member.assets %>
+</p>
+
+<%= link_to 'Edit', edit_member_path(@member) %> |
+<%= link_to 'Back', members_path %>
