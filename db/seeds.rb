@@ -1,1 +1,1 @@
-User.create(email: "rahul.vn@pitsolutions.com", password: "adminadmin")
+User.create(email: "root@server.com", password: "adminadmin")
