@@ -1,0 +1,13 @@
+# Add configuration values here, as shown below.
+#
+# pusher_app_id: "2954"
+# pusher_key: 7381a978f7dd7f9a1117
+# pusher_secret: abdc3b896a0ffb85d373
+# stripe_api_key: sk_test_2J0l093xOyW72XUYJHE4Dv2r
+# stripe_publishable_key: pk_test_ro9jV5SNwGb1yYlQfzG17LHK
+#
+# production:
+#   NASA_DATABASE_USERNAME: test
+#   NASA_DATABASE_PASSWORD: test
+#   SECRET_KEY_BASE: 3fd66d5875b2d7e6e00ee07965b363715a230a7f47fc5bb8e0e02dc89c759403fc4fbc19f8980bbe7981bb874d6fce4c50972e203fd51f55613e452c86c9a186
+
