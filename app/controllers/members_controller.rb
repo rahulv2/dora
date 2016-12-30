@@ -58,6 +58,6 @@ class MembersController < ApplicationController
     end
 
     def member_params
-      params.require(:member).permit(:pit_id, :name, :cubicle_id, :extension_number, :ip_address, :assets, :keyboard, :mouse, :cpu, :monitor, :headset, :webcam)
+      params.require(:member).permit(:name, :ip_address, :host_name)
     end
 end
