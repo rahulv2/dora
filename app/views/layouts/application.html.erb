@@ -15,9 +15,13 @@
     <% if user_signed_in? %>
       <%= render "shared/header" %>
       <div class="container page-container">
+        <%= render "shared/alerts" %>
         <%= yield %>
       </div>
     <% else %>
+      <div class="container">
+        <%= render "shared/alerts" %>
+      </div>
       <%= yield %>
     <% end %>
   </body>
