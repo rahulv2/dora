@@ -5,7 +5,7 @@ class MembersController < ApplicationController
   before_action :set_member, only: [:show, :edit, :update, :destroy]
 
   def index
-    @members = Member.search(params[:search])
+    @members = Member.order("name ASC").search(params[:search])
   end
 
   def show
