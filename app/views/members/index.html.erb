@@ -19,6 +19,8 @@
   </div>
 </div>
 <hr/>
+<%= link_to 'New Member', new_member_path, class: "btn btn-success" %>
+<hr/>
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -26,7 +28,7 @@
       <th>Name</th>
       <th>IP Address</th>
       <th>Host Name</th>
-      <th colspan="3">Actions</th>
+      <th colspan="2">Actions</th>
     </tr>
   </thead>
 
@@ -44,7 +46,6 @@
           <td><%= member.name %></td>
           <td><%= member.ip_address %></td>
           <td><%= member.host_name.blank? ? "--" : member.host_name %></td>
-          <td><%= link_to raw('<i class="glyphicon glyphicon-play"></i>'), member, title: "View" %></td>
           <td><%= link_to raw('<i class="glyphicon glyphicon-edit"></i>'), edit_member_path(member), title: "Edit" %></td>
           <td><%= link_to raw('<i class="glyphicon glyphicon-remove-circle"></i>'), member, method: :delete, data: { confirm: 'Are you sure?' }, title: "Delete" %></td>
         </tr>
@@ -55,7 +56,6 @@
 
 <br>
 
-<%= link_to 'New Member', new_member_path, class: "btn btn-success" %>
 <%= content_for :head do %>
   <%= stylesheet_link_tag "search" %>
 <% end %>
